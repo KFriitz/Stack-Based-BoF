@@ -1,4 +1,4 @@
-FUZZING :
+# FUZZING :
 Trouver un paramètre et lui envoyer autant de bytes possibles en créant un script python et en utilisant la lib socket.
 
 Une fois que le fuzzing a crash, récuperer le nombre de bytes qui l'ont fait crash. 
