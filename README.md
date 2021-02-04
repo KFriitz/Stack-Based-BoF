@@ -20,7 +20,7 @@ Le script ruby nous retourneras l'offset précis afin de controler EIP, tester e
 Cette fois, on devrais voir EIP à "42424242".
 
 # FINDING BADCHARS :
-Taper sur Google : badchars, copier le code et le coller dans une variable.
+Taper sur Google : badchars, copier le code et le coller dans une variable, les encodés directement et les rajouter qu'après la fonction encode.
 
       shellcode = {"A" * nb de bytes qui ont fait crash le fuzzer} + {"B" * 4} + {badchars}
       
@@ -41,6 +41,8 @@ Quand l'adresse est trouvée, relancer Immunity en attachant le programme, cliqu
 Aller sur le script python et faire ceci :
 
       shellcode = {"A" * nb de bytes qui ont fait crash le fuzzer} + {adresse JMP en little endian}
+      
+Pour l'adresse en little endian déjà encodée en byte : ret = bytes.fromhex('{Adresse en little endian}')
 
 Si après exécution du script, EIP contient la valeur de l'adresse, cela fonctionne.
 
