@@ -34,6 +34,9 @@ Désormais, aller sur Immunity importer mona, relancer le programme et chercher 
 Après cela, chercher dans ce propre module, une adresse qui jump sur ESP afin de réecrire dedans et executer le shellcode
 
       !mona jmp -r esp -m {nom du module non sécurisé}
+Ou
+
+      !mona jmp -r esp -cpb "\x00"
       
 Quand l'adresse est trouvée, relancer Immunity en attachant le programme, cliquer en haut sur "Go to address in disassembler", entrer l'adresse et poser un breakpoint avec F2.
 
