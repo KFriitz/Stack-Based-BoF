@@ -4,7 +4,7 @@ Road map pour OSCP
 # FUZZING :
 Trouver un paramètre et lui envoyer autant de bytes possibles en créant un script python et en utilisant la lib socket.
 
-Une fois que le fuzzing a crash, récuperer le nombre de bytes qui l'ont fait crash. 
+Une fois que le programme a crash, récuperer le nombre de bytes qui l'ont fait crash. 
 
 # FINDING OFFSET :
 Afin de récuperer l'offset précis pour écrire EIP, utiliser "/usr/share/metasploit-framework/tools/exploit/pattern_create.rb - l {nb de bytes qui ont fait crash le fuzzer}" pour générer des bytes uniques.
